@@ -42,7 +42,6 @@ public class CoreService {
 
         AssertUtils.notBlank(msgType, WxError.msg_type_is_null);
 
-
         HandStrategy bean = ApplicationUtil.getBean(msgType, HandStrategy.class);
         AssertUtils.notNull(bean,WxError.msg_type_can_found_strategy);
 
