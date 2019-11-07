@@ -1,4 +1,4 @@
-package com.core;
+package com.wx.base.util;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;

@@ -1,4 +1,4 @@
-package com.core;
+package com.wx.base.util;
 
 import com.annotation.XstreamCDATA;
 import com.model.Article;
@@ -14,11 +14,9 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import javax.servlet.http.HttpServletRequest;
-import java.beans.PropertyDescriptor;
 import java.io.InputStream;
 import java.io.Writer;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.HashMap;

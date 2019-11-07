@@ -1,4 +1,4 @@
-package com.app;
+package com.wx.base.util;
 
 
 import com.alibaba.fastjson.JSONObject;

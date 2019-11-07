@@ -12,7 +12,6 @@
     <artifactId>base</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>util</module>
         <module>wxBase</module>
         <module>model</module>
     </modules>

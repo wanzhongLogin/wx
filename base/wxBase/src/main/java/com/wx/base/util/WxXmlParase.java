@@ -1,4 +1,4 @@
-package com.core;
+package com.wx.base.util;
 
 import me.chanjar.weixin.mp.api.WxMpInMemoryConfigStorage;
 import org.xml.sax.InputSource;

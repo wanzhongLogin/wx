@@ -1,4 +1,4 @@
-package com.core;
+package com.wx.base.util;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;

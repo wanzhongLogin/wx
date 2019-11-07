@@ -1,7 +1,6 @@
-package com.core;
+package com.wx.base.util;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
 
 public class ApplicationUtil {
 
