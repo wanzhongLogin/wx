@@ -1,0 +1,32 @@
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://wan:wan@localhost:7777/eureka/
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+      exclude: WEB-INF/**
+      trigger-file: devtools.tg
+  thymeleaf:
+    cache: true
+
+weixin:
+  appId: wx02f1bfadc249d272
+  secret: 656300485c26956be058693bd969fd2f
+  token: wanzhong
+  aesKey: UIU7XGXUAwlZkJ2hGyyOP2kq4OcYqOTcEKDhn6cS8fn
+  accessToken: 3
+  expiresIn: r
+  openId: 3
+
+
+
+
+
+    

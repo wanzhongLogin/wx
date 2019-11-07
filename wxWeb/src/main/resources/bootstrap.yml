@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: wx
+  profiles:
+    active: dev
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .html
+
+wx:
+  version: 1.0

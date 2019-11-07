@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/base/base.iml" filepath="$PROJECT_DIR$/base/base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/model/model.iml" filepath="$PROJECT_DIR$/base/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/util/util.iml" filepath="$PROJECT_DIR$/base/util/util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/weixin.iml" filepath="$PROJECT_DIR$/.idea/weixin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base/wxBase/wxBase.iml" filepath="$PROJECT_DIR$/base/wxBase/wxBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wxService/wxService.iml" filepath="$PROJECT_DIR$/wxService/wxService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wxWeb/wxWeb.iml" filepath="$PROJECT_DIR$/wxWeb/wxWeb.iml" />
+    </modules>
+  </component>
+</project>
