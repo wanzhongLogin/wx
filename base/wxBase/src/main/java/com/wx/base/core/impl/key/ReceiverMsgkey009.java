@@ -1,34 +1,28 @@
-package com.wx.base.core.service.impl.key;
+package com.wx.base.core.impl.key;
 
 
 import com.BaseMessage;
-import com.core.MessageUtil;
+import com.wx.base.util.MessageUtil;
 import com.model.Article;
 import com.resMsg.NewsMessageRes;
-import com.wx.base.core.service.ReceiverMsg;
+import com.wx.base.core.ReceiverMsg;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * wan000按钮事件
- *
- * 文本响应
- *
- * 此处设计可以变成详细的数据库配置类型
- *
+ * wan002按钮事件
  */
-@Component("receiverMsgkey004")
-public class ReceiverMsgkey004 extends ReceiverMsg {
+@Component("receiverMsgkey009")
+public class ReceiverMsgkey009 extends ReceiverMsg {
 
     @Override
     public String parseRequest(BaseMessage bm) {
-
         Article article = new Article();
         article.setTitle("开源中国");
         article.setDescription("描述内容");
-        article.setPicUrl("http://img4.imgtn.bdimg.com/it/u=3806557979,3233516071&fm=214&gp=0.jpg");
+        article.setPicUrl("http://img.taopic.com/uploads/allimg/120727/201995-120HG1030762.jpg");
         article.setUrl("http://m.oschina.net");
 
         List<Article> list = new ArrayList();

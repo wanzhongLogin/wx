@@ -1,17 +1,13 @@
-package com.wx.base.core.service.impl.key;
+package com.wx.base.core.impl.key;
 
 
 import com.BaseMessage;
-import com.core.MessageUtil;
-import com.model.Article;
+import com.wx.base.util.MessageUtil;
 import com.model.Music;
 import com.resMsg.MusicMessageRes;
-import com.resMsg.NewsMessageRes;
-import com.wx.base.core.service.ReceiverMsg;
+import com.wx.base.core.ReceiverMsg;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * key002按钮事件

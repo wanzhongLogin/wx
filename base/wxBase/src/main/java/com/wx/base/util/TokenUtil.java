@@ -1,7 +1,6 @@
 package com.wx.base.util;
 
 import com.alibaba.fastjson.JSON;
-import com.core.HttpUtil;
 import lombok.Data;
 import org.springframework.util.Assert;
 

@@ -1,7 +1,7 @@
 package com.wx.base.common;
 
-import com.core.SecurityUtil;
 import com.wx.base.config.WeiXinConfig;
+import com.wx.base.util.SecurityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

@@ -1,16 +1,12 @@
-package com.wx.base.core.service.impl.key;
+package com.wx.base.core.impl.key;
 
 
 import com.BaseMessage;
-import com.core.MessageUtil;
-import com.model.Article;
-import com.resMsg.NewsMessageRes;
 import com.resMsg.TextMessageRes;
-import com.wx.base.core.service.ReceiverMsg;
+import com.wx.base.core.ReceiverMsg;
+import com.wx.base.util.MessageUtil;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 点击事件

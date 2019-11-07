@@ -1,9 +1,9 @@
-package com.wx.base.core.service.impl;
+package com.wx.base.core.impl;
 
 
 import com.BaseMessage;
-import com.wx.base.core.service.CommandMsg;
-import com.wx.base.core.service.ReceiverMsg;
+import com.wx.base.core.CommandMsg;
+import com.wx.base.core.ReceiverMsg;
 
 /**
  * 微信公众号,解析发送过来

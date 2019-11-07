@@ -1,7 +1,6 @@
 package com;
 
 import com.annotation.XstreamCDATA;
-import com.resMsg.TextMessageRes;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import lombok.Data;
 
@@ -15,15 +14,15 @@ public class BaseMessage {
     //开发者微信号(公众账号原始id)
     @XStreamAlias("ToUserName")
     @XstreamCDATA
-    protected String ToUserName;
+    public String ToUserName;
 
     //发送方账号(一个openId:可以在一个公众号中标识一个用户)
     @XStreamAlias("FromUserName")
     @XstreamCDATA
-    protected String FromUserName;
+    public String FromUserName;
 
     //消息创建时间
     @XStreamAlias("CreateTime")
-    protected long CreateTime;
+    public Long CreateTime;
 
 }

@@ -3,7 +3,7 @@ package com.wx.base.util;
 
 import com.alibaba.fastjson.JSONObject;
 import com.button.*;
-import com.core.HttpUtil;
+import com.wx.base.util.HttpUtil;
 
 /**
  * 创建微信公众号菜单

@@ -25,11 +25,11 @@ import java.util.Map;
 
 /**
  * 消息处理工具类
- *
- * @author liufeng
- * @date 2013-09-15
+ * @author wan
  */
 public class MessageUtil {
+
+
     // 请求消息类型：文本
     public static final String REQ_MESSAGE_TYPE_TEXT = "text";
     // 请求消息类型：图片

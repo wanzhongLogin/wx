@@ -1,7 +1,7 @@
 package com.wx.controller;
 
 
-import com.wx.base.core.service.CoreService;
+import com.wx.base.core.CoreService;
 import com.wx.base.common.CheckService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

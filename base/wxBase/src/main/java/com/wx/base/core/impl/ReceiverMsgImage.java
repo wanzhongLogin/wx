@@ -1,21 +1,19 @@
-package com.wx.base.core.service.impl.key;
+package com.wx.base.core.impl;
 
 
 import com.BaseMessage;
-import com.core.MessageUtil;
+import com.wx.base.util.MessageUtil;
 import com.model.Article;
 import com.resMsg.NewsMessageRes;
-import com.wx.base.core.service.ReceiverMsg;
-import org.springframework.stereotype.Component;
+import com.wx.base.core.ReceiverMsg;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * wan002按钮事件
+ * 微信公众平台,发送图片消息
  */
-@Component("receiverMsgkey006")
-public class ReceiverMsgkey006 extends ReceiverMsg {
+public class ReceiverMsgImage extends ReceiverMsg {
 
     @Override
     public String parseRequest(BaseMessage bm) {
@@ -37,6 +35,7 @@ public class ReceiverMsgkey006 extends ReceiverMsg {
         news.setArticles(list);
         news.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);
         news.setArticleCount(list.size());
+
         return MessageUtil.messageToXml(news);
     }
 

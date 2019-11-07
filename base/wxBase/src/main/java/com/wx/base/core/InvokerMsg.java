@@ -1,4 +1,4 @@
-package com.wx.base.core.service;
+package com.wx.base.core;
 
 
 import com.BaseMessage;

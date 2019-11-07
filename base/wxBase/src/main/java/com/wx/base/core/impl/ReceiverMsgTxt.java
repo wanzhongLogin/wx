@@ -1,10 +1,10 @@
-package com.wx.base.core.service.impl;
+package com.wx.base.core.impl;
 
 
 import com.BaseMessage;
-import com.core.MessageUtil;
+import com.wx.base.util.MessageUtil;
 import com.resMsg.TextMessageRes;
-import com.wx.base.core.service.ReceiverMsg;
+import com.wx.base.core.ReceiverMsg;
 
 /**
  * 消息类接收者
