@@ -3,13 +3,15 @@ package com.wx;
 import com.wx.base.util.ApplicationUtil;
 import com.wx.base.config.Swagger2Config;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Import;
 
 
-@SpringCloudApplication
+//@SpringCloudApplication
+@SpringBootApplication
 @EnableFeignClients
 @Import({ApplicationUtil.class,Swagger2Config.class})
 public class WxServer {

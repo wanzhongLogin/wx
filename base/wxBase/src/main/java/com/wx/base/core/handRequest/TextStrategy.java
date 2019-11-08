@@ -17,8 +17,12 @@ public class TextStrategy implements HandStrategy{
 
     @Override
     public String execute(Map<String, String> requestMap, BaseMessage bm) {
+
         //文本类型
         String content = "文本类型";
+
+
+
         InvokerMsg<String> invoker = new InvokerMsg(new CommandMsgDefault<String>(new ReceiverMsgTxt(content)));
         return invoker.getRespXml(bm);
     }
