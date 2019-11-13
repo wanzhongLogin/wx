@@ -1,9 +1,8 @@
-package com.wx.base.config;
+package com.wx.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -25,7 +24,7 @@ public class Swagger2Config {
     @Value("${spring.application.name}")
     private String serviceName;
 
-    @Value("${wx.version}")
+    @Value("${weixin.version}")
     private String serviceVersion;
 
     @Bean

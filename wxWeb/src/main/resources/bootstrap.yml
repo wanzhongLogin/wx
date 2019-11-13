@@ -2,13 +2,13 @@ server:
   port: 8080
 spring:
   application:
-    name: wx
+    name: weixin
   profiles:
     active: dev
   mvc:
     view:
-      prefix: /WEB-INF/views/
-      suffix: .html
+      prefix: /
+      suffix: .jsp
 
-wx:
+weixin:
   version: 1.0
