@@ -6,9 +6,8 @@ spring:
   profiles:
     active: dev
   mvc:
-    view:
-      prefix: /
-      suffix: .jsp
+    prefix: /WEB-INF/views/
+    suffix: .jsp
 
 weixin:
   version: 1.0

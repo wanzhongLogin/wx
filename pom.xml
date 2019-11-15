@@ -14,6 +14,7 @@
         <module>wxWeb</module>
         <module>base</module>
         <module>eureka</module>
+        <module>web</module>
     </modules>
 
     <dependencyManagement>
