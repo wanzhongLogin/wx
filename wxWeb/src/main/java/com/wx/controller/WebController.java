@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class WebController {
 
-    @GetMapping(value = "/hello")
+    @GetMapping(value = "/helloss")
     public ModelAndView test(){
         ModelAndView mv = new ModelAndView("hello");
         return mv;
