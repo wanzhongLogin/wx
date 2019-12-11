@@ -6,6 +6,18 @@
 #    service-url:
 #      defaultZone: http://wan:wan@localhost:7777/eureka/
 
+
+spring:
+  thymeleaf:
+    prefix: classpath:/web/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    mode: LEGACYHTML5
+    content-type: text/html
+    cache: false
+
+
 weixin:
   appId: wx02f1bfadc249d272
   secret: 656300485c26956be058693bd969fd2f
@@ -14,9 +26,3 @@ weixin:
   accessToken: 3
   expiresIn: r
   openId: 3
-
-
-
-
-
-    

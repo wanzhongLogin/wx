@@ -5,8 +5,5 @@ spring:
     name: weixin
   profiles:
     active: dev
-  mvc:
-    prefix: /WEB-INF/views/
-    suffix: .html
 weixin:
   version: 1.0
