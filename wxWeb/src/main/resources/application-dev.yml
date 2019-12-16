@@ -1,11 +1,10 @@
-#eureka:
-#  instance:
-#    hostname: localhost
-#    prefer-ip-address: true
-#  client:
-#    service-url:
-#      defaultZone: http://wan:wan@localhost:7777/eureka/
-
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://wan:wan@localhost:7777/eureka/
 
 spring:
   thymeleaf:

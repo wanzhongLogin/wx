@@ -1,16 +1,19 @@
 package com.wx.controller;
 
 
-import com.wx.base.core.CoreService;
 import com.wx.base.common.CheckService;
+import com.wx.base.util.ParseXml;
+import com.wx.feign.CoreFeign;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Map;
 
 
 /**
@@ -25,7 +28,7 @@ public class CoreController {
     private CheckService checkService;
 
     @Autowired
-    private CoreService coreService;
+    private CoreFeign coreFeign;
 
     /**
      * 与公众号连接入口
@@ -70,8 +73,14 @@ public class CoreController {
         req.setCharacterEncoding("UTF-8");
         res.setCharacterEncoding("UTF-8");
         //处理消息
-        String respXml = coreService.processRquest(req);
-        return respXml;
+        try {
+            ServletInputStream inputStream = req.getInputStream();
+            Map<String, String> map = ParseXml.parseXml(inputStream);
+            String respXml = coreFeign.processRquest(map);
+            return respXml;
+        }catch(Exception e){
+            return null;
+        }
     }
 
 

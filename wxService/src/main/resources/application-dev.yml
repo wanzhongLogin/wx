@@ -1,0 +1,78 @@
+server:
+  port: 17005
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://wan:wan@localhost:7777/eureka/
+  instance:
+    prefer-ip-address: true
+  server:
+    eviction-interval-timer-in-ms: 1000
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+      isolation:
+        thread:
+          timeoutInMilliseconds: 60000
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+feign:
+  hystrix:
+    enabled: true
+## 刷新时，关闭安全验证
+management:
+  security:
+    enabled: false
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://172.20.24.29:3306/wx?createDatabaseIfNotExist=true&useSSL=false&characterEncoding=utf8&useUnicode=true
+    tomcat:
+      max-active: 200
+      max-idle: 30
+      min-idle: 5
+      test-on-borrow: true
+      validation-query: select 1
+      time-between-eviction-runs-millis: 360000
+      initial-size: 5
+    servlet:
+      multipart:
+        max-request-size: 50MB
+        max-file-size: 50MB
+    jpa:
+      properties:
+        hibernate.dialect: org.hibernate.dialect.MySQL55Dialect
+        hibernate.show_sql: false
+        hibernate.format_sql: true
+        hibernate.use_sql_comments: true
+        hibernate.hbm2ddl.auto: update
+      hibernate:
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+pagehelper:
+  autoDialect: true
+  closeConn: true
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+weixin:
+  appId: wx02f1bfadc249d272
+  secret: 656300485c26956be058693bd969fd2f
+  token: wanzhong
+  aesKey: UIU7XGXUAwlZkJ2hGyyOP2kq4OcYqOTcEKDhn6cS8fn
+  accessToken: 3
+  expiresIn: r
+  openId: 3
