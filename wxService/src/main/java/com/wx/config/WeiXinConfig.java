@@ -1,4 +1,4 @@
-package com.wx.base.config;
+package com.wx.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

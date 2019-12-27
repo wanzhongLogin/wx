@@ -1,15 +1,13 @@
 package com.wx.core;
 
-import com.wx.base.error.WxError;
+import com.wx.base.common.Globals;
 import com.wx.base.util.ApplicationUtil;
 import com.wx.base.util.AssertUtils;
-import com.wx.base.util.ParseXml;
 import com.wx.core.handRequest.Execute;
 import com.wx.core.handRequest.HandStrategy;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.ServletInputStream;
-import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
@@ -17,6 +15,9 @@ import java.util.Map;
  */
 @Component
 public class CoreService {
+
+    @Autowired
+    private ApplicationUtil applicationUtil;
 
     /**
      * 解析微信发送过来的内容,然后返回到微信公众号页面的内容
@@ -36,10 +37,10 @@ public class CoreService {
 
         String msgType = requestMap.get("MsgType");
 
-        AssertUtils.notBlank(msgType, WxError.msg_type_is_null);
+        AssertUtils.notBlank(msgType, Globals.msg_type_is_null.getMessage());
 
-        HandStrategy bean = ApplicationUtil.getBean(msgType, HandStrategy.class);
-        AssertUtils.notNull(bean,WxError.msg_type_can_found_strategy);
+        HandStrategy bean = applicationUtil.getBean(msgType, HandStrategy.class);
+        AssertUtils.notNull(bean,Globals.msg_type_can_found_strategy.getMessage());
 
         Execute execute = new Execute(bean);
         return execute.execute(requestMap);

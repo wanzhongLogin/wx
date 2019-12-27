@@ -1,12 +1,10 @@
-server:
-  port: 17005
-
 eureka:
   client:
     service-url:
       defaultZone: http://wan:wan@localhost:7777/eureka/
   instance:
     prefer-ip-address: true
+    hostname: localhost
   server:
     eviction-interval-timer-in-ms: 1000
 
@@ -52,7 +50,7 @@ spring:
     jpa:
       properties:
         hibernate.dialect: org.hibernate.dialect.MySQL55Dialect
-        hibernate.show_sql: false
+        hibernate.show_sql: true
         hibernate.format_sql: true
         hibernate.use_sql_comments: true
         hibernate.hbm2ddl.auto: update

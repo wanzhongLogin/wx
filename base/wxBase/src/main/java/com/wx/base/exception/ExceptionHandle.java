@@ -25,7 +25,6 @@ import static com.wx.base.exception.SoaExceptionFieldNames.ERROR_MESSAGE;
 @Slf4j
 public class ExceptionHandle {
 
-
     /**
      * BindException 异常处理
      * @param e
@@ -57,20 +56,20 @@ public class ExceptionHandle {
     }
 
     /**
-     * 异常处理
-     */
-    @ExceptionHandler(value = ServerCallException.class)
-    public void doException(ServerCallException e, HttpServletResponse response) {
-        messageHandle(e, response, e.getCode(), e.getDescription());
-    }
-
-    /**
      * RuntimeException 异常处理
      */
     @ExceptionHandler(value = RuntimeException.class)
     @ResponseBody
     public void doException(RuntimeException e, HttpServletResponse response) {
         messageHandle(e, response, RestResponseCodeEnum.DATA_ERROR);
+    }
+
+    /**
+     * 异常处理
+     */
+    @ExceptionHandler(value = ServerCallException.class)
+    public void doException(ServerCallException e, HttpServletResponse response) {
+        messageHandle(e, response, e.getCode(), e.getDescription());
     }
 
     /**

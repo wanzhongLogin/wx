@@ -11,8 +11,8 @@ import org.springframework.util.Assert;
  */
 public class TokenUtil {
 
-    static String appID = "wx81a506b53d13a7b3";
-    static String appsecret = "51cc5daeb6569782350a5797e53a3e79";
+    static String appID = "wxd6feee8620d649a0";
+    static String appsecret = "71eba3bb354255d423151c36828ad12e";
 
     
     public static String getToken(){

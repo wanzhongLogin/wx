@@ -11,8 +11,8 @@ import com.wx.base.util.HttpUtil;
  */
 public class MenuUtil {
     static String accessToken = TokenUtil.getToken();
-    static String appID = "wx81a506b53d13a7b3";
-    static String appsecret = "51cc5daeb6569782350a5797e53a3e79";
+    static String appID = "wxd6feee8620d649a0";
+    static String appsecret = "71eba3bb354255d423151c36828ad12e";
 
     public static void creMenu(){
         //菜单
@@ -23,6 +23,11 @@ public class MenuUtil {
         cb1.setName("key000");
         cb1.setType("click");
         cb1.setKey("key000");
+
+        ViewButton vb2 = new ViewButton();
+        vb2.setName("web");
+        vb2.setType("view");
+        vb2.setUrl("http://lurou.vipgz2.idcfengye.com/web/test");
 
         //url按钮
         ViewButton vb1 = new ViewButton();
@@ -45,16 +50,17 @@ public class MenuUtil {
         //按钮群
         ComplexButton com1 = new ComplexButton();
         com1.setName("菜单1");
-
         //按钮加入菜单群
-        com1.setSub_button(new BaseButton[]{cb1});
+        com1.setSub_button(new BaseButton[]{cb1,vb2});
+
+
 
         //按钮群
         ComplexButton com2 = new ComplexButton();
         com2.setName("菜单2");
-
         //按钮加入菜单群
         com2.setSub_button(new BaseButton[]{cb3, cb4});
+
 
         //放入菜单列表
         menu.setButton(new BaseButton[]{com1, com2, vb1});

@@ -1,6 +1,6 @@
 package com.wx.base.exception;
 
-public class ServerCallException extends BizBusinessException {
+public class ServerCallException extends CheckedException {
 
     public ServerCallException(){
         super("服务调用异常");

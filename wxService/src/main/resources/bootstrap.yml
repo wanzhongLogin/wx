@@ -11,3 +11,6 @@ spring:
     name: wxService
   profiles:
     active: dev
+
+server:
+  port: 17005

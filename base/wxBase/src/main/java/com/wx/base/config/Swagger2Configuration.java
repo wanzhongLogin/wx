@@ -18,7 +18,6 @@ import java.sql.Timestamp;
  */
 @Configuration
 @EnableSwagger2
-@Profile({"!release", "!production", "!master"})
 public class Swagger2Configuration {
 
     @Bean

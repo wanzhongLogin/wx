@@ -1,38 +1,30 @@
 package com.wx.base.common;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * 全局常量
  */
-public final class Globals {
+public enum Globals {
 
-    //click key-wan001
-    public static String key0 = "key000";
-    public static String key1 = "key001";
-    public static String key2 = "key002";
-    public static String key3 = "key003";
-    public static String key4 = "key004";
-    public static String key5 = "key005";
-    public static String key6 = "key006";
-    public static String key7 = "key007";
-    public static String key8 = "key008";
-    public static String key9 = "key009";
+    FromUserName("1","消息的来源id"),
+    msg_type_is_null("2","msg_type为空"),
+    msg_type_can_found_strategy("3","msg_type未找到处理改类型的程序")
+    ;
 
-    public static List<String> clickKey = new ArrayList<String>();
-    static{
-        clickKey.add(key0);
-        clickKey.add(key1);
-        clickKey.add(key2);
-        clickKey.add(key3);
-        clickKey.add(key4);
-        clickKey.add(key5);
-        clickKey.add(key6);
-        clickKey.add(key7);
-        clickKey.add(key8);
-        clickKey.add(key9);
+    private String code;
+    private String message;
+
+    Globals(String code, String message) {
+        this.code = code;
+        this.message = message;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 
 }

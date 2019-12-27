@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 解析xml文件
+ * 解析微信xml文件
  */
 public class ParseXml {
 
@@ -36,11 +36,9 @@ public class ParseXml {
         for(Element element : elements) {
             map.put(element.getName(),element.getText());
         }
-
         //释放资源
         is.close();
         is = null;
-
         return map;
     }
 

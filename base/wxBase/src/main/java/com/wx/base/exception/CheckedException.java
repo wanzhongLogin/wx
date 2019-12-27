@@ -5,42 +5,39 @@ package com.wx.base.exception;
  * Spring的事务针对这个及其子类异常，不会进行进行回滚。
  * 必须根据具体的业务类型来定义子类,不能直接使用这个类
  */
-public abstract class BizCheckedException extends RuntimeException implements BizException {
+public abstract class CheckedException extends RuntimeException implements BizException {
 
     private static final long serialVersionUID = 5589536153777509425L;
 
-    public BizCheckedException(ExceptionType type, String message) {
-
+    public CheckedException(ExceptionType type, String message) {
         super(message);
         this.code = type.getCode();
         this.description = type.getDescription();
     }
 
-    public BizCheckedException(String message) {
+    public CheckedException(String message) {
         super(message);
         this.description = message;
     }
 
-    public BizCheckedException(String message, Object... objs) {
+    public CheckedException(String message, Object... objs) {
         super(String.format(message, objs));
         this.description = String.format(message, objs);
     }
 
-    public BizCheckedException(int exceptionCode, String message) {
+    public CheckedException(int exceptionCode, String message) {
         super(message);
         this.code = exceptionCode;
         this.description = message;
     }
 
-    public BizCheckedException(int exceptionCode, String message, Throwable cause) {
-
+    public CheckedException(int exceptionCode, String message, Throwable cause) {
         super(message, cause);
         this.code = exceptionCode;
         this.description = message;
     }
 
-    public BizCheckedException(String message, Throwable cause) {
-
+    public CheckedException(String message, Throwable cause) {
         super(message, cause);
         this.description = message;
     }

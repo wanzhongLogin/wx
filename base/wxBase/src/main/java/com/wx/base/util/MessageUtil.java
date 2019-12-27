@@ -159,7 +159,6 @@ public class MessageUtil {
         return map;
     }
 
-
     /**
      * 图片消息对象转换成xml
      * @param imageMessage 图片消息对象
@@ -211,10 +210,6 @@ public class MessageUtil {
         xstream.alias("item", new Article().getClass());
         return xstream.toXML(newsMessage);
     }
-
-
-
-
 
     private static void add(Field[] fields,List<String> list){
         for (Field f : fields) {

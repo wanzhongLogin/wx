@@ -18,8 +18,8 @@ spring:
 
 
 weixin:
-  appId: wx02f1bfadc249d272
-  secret: 656300485c26956be058693bd969fd2f
+  appId: wxd6feee8620d649a0
+  secret: 71eba3bb354255d423151c36828ad12e
   token: wanzhong
   aesKey: UIU7XGXUAwlZkJ2hGyyOP2kq4OcYqOTcEKDhn6cS8fn
   accessToken: 3
