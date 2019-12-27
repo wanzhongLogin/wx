@@ -14,7 +14,7 @@
         <appender-ref ref="STDOUT"/>
     </logger>
     <logger name="org.springframework">
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="STDOUT"/>
     </logger>
     <logger name="io.netty">
@@ -22,7 +22,7 @@
         <appender-ref ref="STDOUT"/>
     </logger>
     <logger name="org.springframework.boot.autoconfigure.logging">
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="STDOUT"/>
     </logger>
 

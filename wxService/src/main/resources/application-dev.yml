@@ -3,7 +3,6 @@ eureka:
     service-url:
       defaultZone: http://wan:wan@localhost:7777/eureka/
   instance:
-    prefer-ip-address: true
     hostname: localhost
   server:
     eviction-interval-timer-in-ms: 1000
@@ -47,16 +46,16 @@ spring:
       multipart:
         max-request-size: 50MB
         max-file-size: 50MB
-    jpa:
-      properties:
-        hibernate.dialect: org.hibernate.dialect.MySQL55Dialect
-        hibernate.show_sql: true
-        hibernate.format_sql: true
-        hibernate.use_sql_comments: true
-        hibernate.hbm2ddl.auto: update
-      hibernate:
-        naming:
-          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+      hibernate.show_sql: true
+      hibernate.format_sql: true
+      hibernate.use_sql_comments: true
+      hibernate.hbm2ddl.auto: update
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 pagehelper:
   autoDialect: true
   closeConn: true

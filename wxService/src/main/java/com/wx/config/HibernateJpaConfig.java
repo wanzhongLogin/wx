@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableJpaRepositories(basePackages = {"com.wx.repository"})
-@EntityScan({"com.wx.entity"})
+@EntityScan(basePackages = "com.wx.entity")
 @EnableTransactionManagement
 public class HibernateJpaConfig {
 
