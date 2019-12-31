@@ -1,11 +1,11 @@
-package com.wx.core.impl.key;
+package com.wx.core.command.impl;
 
 
 import com.BaseMessage;
 import com.model.Article;
 import com.resMsg.NewsMessageRes;
 import com.wx.base.util.MessageUtil;
-import com.wx.core.ReceiverMsg;
+import com.wx.core.command.ReceiverMsg;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -14,8 +14,8 @@ import java.util.List;
 /**
  * wan002按钮事件
  */
-@Component("receiverMsgkey007")
-public class ReceiverMsgkey007 extends ReceiverMsg {
+@Component("receiverMsgkey008")
+public class ReceiverMsgkey008 extends ReceiverMsg {
 
     @Override
     public String parseRequest(BaseMessage bm) {

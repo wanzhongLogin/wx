@@ -1,4 +1,4 @@
-package com.wx.core;
+package com.wx.core.command;
 
 
 import com.BaseMessage;

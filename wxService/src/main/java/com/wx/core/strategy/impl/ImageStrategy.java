@@ -1,24 +1,24 @@
-package com.wx.core.impl.key;
-
+package com.wx.core.strategy.impl;
 
 import com.BaseMessage;
 import com.model.Article;
 import com.resMsg.NewsMessageRes;
 import com.wx.base.util.MessageUtil;
-import com.wx.core.ReceiverMsg;
-import org.springframework.stereotype.Component;
+import com.wx.core.strategy.HandStrategy;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 
 /**
- * wan002按钮事件
+ * 图片处理类型
  */
-@Component("receiverMsgkey009")
-public class ReceiverMsgkey009 extends ReceiverMsg {
-
+@Service("image")
+public class ImageStrategy implements HandStrategy {
     @Override
-    public String parseRequest(BaseMessage bm) {
+    public String execute(Map<String, String> requestMap, BaseMessage bm) {
         Article article = new Article();
         article.setTitle("开源中国");
         article.setDescription("描述内容");
@@ -37,7 +37,7 @@ public class ReceiverMsgkey009 extends ReceiverMsg {
         news.setArticles(list);
         news.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_NEWS);
         news.setArticleCount(list.size());
+
         return MessageUtil.messageToXml(news);
     }
-
 }

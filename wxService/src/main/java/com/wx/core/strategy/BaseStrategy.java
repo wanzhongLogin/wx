@@ -1,4 +1,4 @@
-package com.wx.core.handRequest;
+package com.wx.core.strategy;
 
 import com.wx.base.util.ApplicationUtil;
 import org.springframework.beans.factory.annotation.Autowired;

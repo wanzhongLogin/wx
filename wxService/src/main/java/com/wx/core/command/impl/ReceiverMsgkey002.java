@@ -1,11 +1,11 @@
-package com.wx.core.impl.key;
+package com.wx.core.command.impl;
 
 
 import com.BaseMessage;
 import com.model.Music;
 import com.resMsg.MusicMessageRes;
 import com.wx.base.util.MessageUtil;
-import com.wx.core.ReceiverMsg;
+import com.wx.core.command.ReceiverMsg;
 import org.springframework.stereotype.Component;
 
 
