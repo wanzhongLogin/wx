@@ -9,6 +9,7 @@ import java.util.Map;
 
 /**
  * 微信接入feign
+ * @author wan
  */
 @FeignClient(qualifier = "coreFeign",name = "wxService",fallback = CoreDegradedFeign.class)
 public interface CoreFeign {

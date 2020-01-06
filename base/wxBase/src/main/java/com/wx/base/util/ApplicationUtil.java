@@ -1,13 +1,15 @@
 package com.wx.base.util;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ApplicationUtil {
+public class ApplicationUtil implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
+    @Override
     public void setApplicationContext(ApplicationContext ac){
         applicationContext = ac;
     }

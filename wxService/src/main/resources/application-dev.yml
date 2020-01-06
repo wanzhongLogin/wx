@@ -66,10 +66,14 @@ mybatis:
 
 
 weixin:
-  appId: wx02f1bfadc249d272
-  secret: 656300485c26956be058693bd969fd2f
+  appId: wxd6feee8620d649a0
+  secret: 71eba3bb354255d423151c36828ad12e
   token: wanzhong
   aesKey: UIU7XGXUAwlZkJ2hGyyOP2kq4OcYqOTcEKDhn6cS8fn
   accessToken: 3
   expiresIn: r
   openId: 3
+  urls:
+    ## 获取access_token,微信接口
+    get_access_token: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={appid}&secret={secret}
+    get_open_id: https://api.weixin.qq.com/cgi-bin/user/info?access_token={access_token}&openid={openid}&lang=zh_CN

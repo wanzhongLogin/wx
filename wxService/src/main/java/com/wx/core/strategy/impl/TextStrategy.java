@@ -3,9 +3,6 @@ package com.wx.core.strategy.impl;
 import com.BaseMessage;
 import com.resMsg.TextMessageRes;
 import com.wx.base.util.MessageUtil;
-import com.wx.core.command.InvokerMsg;
-import com.wx.core.command.CommandMsgDefault;
-import com.wx.core.command.impl.ReceiverMsgTxt;
 import com.wx.core.strategy.HandStrategy;
 import org.springframework.stereotype.Service;
 

@@ -10,7 +10,9 @@ import com.wx.base.util.HttpUtil;
  * @author wan
  */
 public class MenuUtil {
-    static String accessToken = TokenUtil.getToken();
+    //TODO
+//    static String accessToken = TokenUtil.getAccessToken();
+    static String accessToken;
     static String appID = "wxd6feee8620d649a0";
     static String appsecret = "71eba3bb354255d423151c36828ad12e";
 

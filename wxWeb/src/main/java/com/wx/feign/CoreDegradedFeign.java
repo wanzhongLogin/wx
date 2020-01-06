@@ -7,7 +7,6 @@ import java.util.Map;
 @Component
 public class CoreDegradedFeign implements CoreFeign{
 
-
     @Override
     public String processRquest(Map<String, String> map) {
         return null;

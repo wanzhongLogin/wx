@@ -5,6 +5,8 @@ import com.wx.base.common.CheckService;
 import com.wx.base.util.ParseXml;
 import com.wx.feign.CoreFeign;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,6 +25,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("coreController")
 public class CoreController {
+
+    private static final Logger logger = LoggerFactory.getLogger(CoreController.class);
 
     @Autowired
     private CoreFeign coreFeign;
@@ -66,9 +70,11 @@ public class CoreController {
         try {
             ServletInputStream inputStream = req.getInputStream();
             Map<String, String> map = ParseXml.parseXml(inputStream);
+            logger.info(map.toString());
             String respXml = coreFeign.processRquest(map);
             return respXml;
         }catch(Exception e){
+            e.printStackTrace();
             return null;
         }
     }

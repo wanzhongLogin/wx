@@ -1,43 +1,65 @@
 package com.wx.base.util;
 
-import com.alibaba.fastjson.JSON;
-import lombok.Data;
+import com.alibaba.fastjson.JSONObject;
+import com.vo.UnionOpenIdVo;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * token的util
  * 获取access_token
  * 有效期为2小时
  */
+@Component
 public class TokenUtil {
 
-    static String appID = "wxd6feee8620d649a0";
-    static String appsecret = "71eba3bb354255d423151c36828ad12e";
+    @Value("${weixin.appId}")
+    private String appID;
 
-    
-    public static String getToken(){
-        String tokenUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid="+appID+"&secret="+appsecret;
-        String str = HttpUtil.sendHttpsGET(tokenUrl);
-        parseJson pj = JSON.parseObject(str, parseJson.class);
-        String access_token = pj.getAccess_token();
-        String expirse_in = pj.getExpires_in();
+    @Value("${weixin.secret}")
+    private String appsecret;
 
-        Assert.notNull(access_token,"未获取到token");
+    @Value("${weixin.urls.get_access_token}")
+    private String url;
 
-        if(!expirse_in.equals("7200")){
-            throw new RuntimeException("获取access_token失败,失败码:["+ expirse_in +"]");
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @Value("${weixin.urls.get_open_id}")
+    private String urlOpen;
+
+    /**
+     * 获取access_token
+     * @return
+     */
+    public String getAccessToken(){
+        String body = restTemplate.getForObject(url, String.class, appID, appsecret);
+        if(StringUtils.isNotBlank(body)){
+            JSONObject jsonObject = JSONObject.parseObject(body);
+            String access_token = jsonObject.getString("access_token");
+            String expires_in = jsonObject.getString("expires_in");
+            Assert.notNull(access_token,"未获取到token");
+            if(!expires_in.equals("7200")){
+                throw new RuntimeException("获取access_token失败,失败码:["+ expires_in +"]");
+            }
+            return access_token;
+        }else{
+            return null;
         }
-        return access_token;
     }
 
-    public static void main(String args[]){
-        String token = getToken();
-        System.out.println(token);
+    /**
+     * 根据openId,获取用户信息
+     * @param openId
+     * @return
+     */
+    public UnionOpenIdVo getOpenId(String openId){
+        String accessToken = this.getAccessToken();
+        UnionOpenIdVo body = restTemplate.getForObject(urlOpen, UnionOpenIdVo.class, accessToken, openId);
+        return body;
     }
-}
-
-@Data
-class parseJson{
-    private String access_token;
-    private String expires_in;
 }
