@@ -12,9 +12,12 @@
     <artifactId>base</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>wxBase</module>
-        <module>model</module>
-        <module>wxRedis</module>
+
+        <module>core</module>
+        <module>service-core</module>
+        <module>web-core</module>
+        <module>redis</module>
+
     </modules>
 
 

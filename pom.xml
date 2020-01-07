@@ -10,11 +10,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>wxService</module>
         <module>base</module>
-        <module>web</module>
         <module>eureka</module>
-        <module>wxDao</module>
+        <module>model</module>
+        <module>web</module>
+        <module>dao</module>
+        <module>service</module>
     </modules>
 
     <dependencies>
