@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: weixin
+  profiles:
+    active: dev
+weixin:
+  version: 1.0

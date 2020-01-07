@@ -1,0 +1,30 @@
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://wan:wan@localhost:7777/eureka/
+
+spring:
+  thymeleaf:
+    prefix: classpath:/web/
+    check-template-location: true
+    suffix: .html
+    encoding: UTF-8
+    mode: LEGACYHTML5
+    content-type: text/html
+    cache: false
+
+weixin:
+  appId: wxd6feee8620d649a0
+  secret: 71eba3bb354255d423151c36828ad12es
+  token: wanzhong
+  aesKey: UIU7XGXUAwlZkJ2hGyyOP2kq4OcYqOTcEKDhn6cS8fn
+  accessToken: 3
+  expiresIn: r
+  openId: 3
+  urls:
+    ## 获取access_token,微信接口
+    get_access_token: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={appid}&secret={secret}
+    get_open_id: https://api.weixin.qq.com/cgi-bin/user/info?access_token={access_token}&openid={openid}&lang=zh_CN
