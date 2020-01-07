@@ -11,8 +11,8 @@
 
     <modules>
         <module>wxService</module>
-        <module>wxWeb</module>
         <module>base</module>
+        <module>web</module>
         <module>eureka</module>
         <module>wxDao</module>
     </modules>
